@@ -14,6 +14,12 @@ public class Lambda {
     public static void printAllLambda(List<Integer> numbers) {
         System.out.println("printAllLambda");
 
+//        numbers.forEach(new Consumer<Integer>() {
+//            @Override
+//            public void accept(Integer value) {
+//                System.out.print(value);
+//            }
+//        });
         numbers.forEach(System.out::println);
     }
 
@@ -48,6 +54,16 @@ public class Lambda {
         int total = 0;
         for (int number : numbers) {
             if (number > 3) {
+                total += number;
+            }
+        }
+        return total;
+    }
+
+    public static int sumAll(List<Integer> numbers, SumStrategy strategy) {
+        int total = 0;
+        for (int number : numbers) {
+            if (strategy.isCondition(number)) {
                 total += number;
             }
         }
