@@ -14,8 +14,8 @@ public class OutputView {
         }
     }
 
-    public static void printPlayerCardInfo(Player player) {
-        System.out.printf("%s 카드: %s\n", player.getName(), player.getCardNameList());
+    public static void printGamerCardInfo(Gamer gamer) {
+        System.out.printf("%s 카드: %s\n", gamer.getName(), gamer.getCardNameList());
     }
 
     public static void printResultScore(Gamer gamer) {

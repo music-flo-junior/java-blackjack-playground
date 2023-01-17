@@ -37,7 +37,7 @@ public class InputView {
             } else {
                 System.out.println("잘못된 값을 입력했습니다. 다시 입력해주세요.");
             }
-            OutputView.printPlayerCardInfo(player);
+            OutputView.printGamerCardInfo(player);
         }
     }
 }
