@@ -24,4 +24,12 @@ public class Card {
     public int getPoint() {
         return number.getScore();
     }
+
+    public boolean isAce() {
+        return number.isAce();
+    }
+
+    public boolean isNotAce() {
+        return !isAce();
+    }
 }

@@ -1,7 +1,7 @@
 package nextstep.blackjack;
 
 public enum CardNumber {
-    ONE("A", 11), // FIXME: 1은 1 혹은 11으로 계산할 수 있음.
+    ACE("A", 1),
     TWO("2", 2),
     THREE("3", 3),
     FOUR("4", 4),
@@ -10,6 +10,7 @@ public enum CardNumber {
     SEVEN("7", 7),
     EIGHT("8", 8),
     NINE("9", 9),
+    TEM("10", 10),
     JACK("J", 10),
     QUEEN("Q", 10),
     KING("K", 10);
@@ -20,6 +21,10 @@ public enum CardNumber {
     CardNumber(String name, int score) {
         this.name = name;
         this.score = score;
+    }
+
+    public boolean isAce() {
+        return this == ACE;
     }
 
     public int getScore() {
